@@ -1,0 +1,206 @@
+{
+  "meta": {
+    "title": "New Zealand recreational fish length–weight coefficients",
+    "equation": "W_kg = a * (L_cm ** b)",
+    "default_length_unit": "cm",
+    "default_weight_unit": "kg",
+    "region": "New Zealand (preferred where available); some highly migratory species use best-available SW Pacific / WCPO coefficients noted in records.",
+    "created_local_date": "2026-01-14",
+    "notes": [
+      "Ensure the input length type matches the coefficient record (e.g., FL vs LJFL).",
+      "Coefficients are population averages; individual condition can vary."
+    ]
+  },
+  "species": [
+    {
+      "common_name": "Yellowtail Kingfish",
+      "scientific_name": "Seriola lalandi",
+      "length_type": "FL",
+      "min_length_cm": 75,
+      "max_length_cm": 170,
+      "a": 0.03651,
+      "b": 2.762,
+      "equation": "W_kg = 0.03651 * (L_cm ** 2.762)",
+      "source": {
+        "type": "NIWA / MPI report and analysis",
+        "citation": "Walsh et al. (2003) as reported in NIWA/MPI documentation (both sexes combined).",
+        "evidence_note": "NZ coefficient; fork length relationship."
+      },
+      "app_notes": [
+        "Use fork length (snout to tail fork)."
+      ]
+    },
+    {
+      "common_name": "Kahawai",
+      "scientific_name": "Arripis trutta",
+      "length_type": "FL",
+      "min_length_cm": 30,
+      "max_length_cm": 80,
+      "a": 0.0236,
+      "b": 2.89,
+      "equation": "W_kg = 0.0236 * (L_cm ** 2.89)",
+      "source": {
+        "type": "Peer-reviewed / NIWA-linked study",
+        "citation": "Hartill & Walsh (2005).",
+        "evidence_note": "NZ relationship; both sexes combined."
+      },
+      "app_notes": [
+        "Use fork length (snout to tail fork)."
+      ]
+    },
+    {
+      "common_name": "Snapper",
+      "scientific_name": "Pagrus auratus",
+      "length_type": "FL",
+      "min_length_cm": 30,
+      "max_length_cm": 120,
+      "a": 0.04467,
+      "b": 2.793,
+      "equation": "W_kg = 0.04467 * (L_cm ** 2.793)",
+      "source": {
+        "type": "Scientific publication",
+        "citation": "Paul (1976) length–weight relationship (originally weight in grams; converted here to kg).",
+        "evidence_note": "NZ/Australasian reference commonly used in NZ fisheries contexts."
+      },
+      "app_notes": [
+        "Use fork length; confirm your UI guidance uses FL not total length."
+      ]
+    },
+    {
+      "common_name": "Hāpuku",
+      "scientific_name": "Polyprion oxygeneios",
+      "length_type": "FL",
+      "min_length_cm": 75,
+      "max_length_cm": 200,
+      "a": 0.0142,
+      "b": 3.003,
+      "equation": "W_kg = 0.0142 * (L_cm ** 3.003)",
+      "source": {
+        "type": "NIWA / fisheries assessment report",
+        "citation": "HAP 1 stock parameters (regional); compiled in NIWA/MPI assessment tables.",
+        "evidence_note": "NZ stock-specific estimate; multiple regional variants exist."
+      },
+      "app_notes": [
+        "Groper in NZ commonly refers to Hāpuku and Bass; ensure correct species selection.",
+        "Consider adding regional variants later if you need finer accuracy (e.g., HAP 7)."
+      ],
+      "variants": [
+        {
+          "label": "Example alternate regional estimate (range indicator)",
+          "a": 0.0242,
+          "b": 2.87,
+          "notes": "Illustrative alternative within reported regional ranges; use if you store a coefficient set per stock."
+        }
+      ]
+    },
+    {
+      "common_name": "Bass",
+      "scientific_name": "Polyprion americanus",
+      "length_type": "FL",
+      "min_length_cm": 75,
+      "max_length_cm": 200,
+      "a": 0.2734,
+      "b": 2.382,
+      "equation": "W_kg = 0.2734 * (L_cm ** 2.382)",
+      "source": {
+        "type": "Scientific report / thesis used in NZ assessments",
+        "citation": "Johnston (1993) as reported in NIWA/MPI groper assessment tables.",
+        "evidence_note": "NZ reference for bass; robust-bodied compared with Hāpuku."
+      },
+      "app_notes": [
+        "Use fork length; expect heavier fish for a given length than Hāpuku."
+      ]
+    },
+    {
+      "common_name": "Yellowfin Tuna",
+      "scientific_name": "Thunnus albacares",
+      "length_type": "FL",
+      "min_length_cm": 75,
+      "max_length_cm": 300,
+      "a": 3e-05,
+      "b": 2.8893,
+      "equation": "W_kg = 0.00003 * (L_cm ** 2.8893)",
+      "source": {
+        "type": "WCPO / SW Pacific study (best-available for NZ rec use)",
+        "citation": "Regional WCPFC-area study (example: large sample from WCPO).",
+        "evidence_note": "Highly migratory; NZ-specific coefficients may be sparse—treat as best-available proxy and label accordingly."
+      },
+      "app_notes": [
+        "Use fork length; consider later replacing with NZ observer-based coefficients if available."
+      ]
+    },
+    {
+      "common_name": "Southern Bluefin Tuna",
+      "scientific_name": "Thunnus maccoyii",
+      "length_type": "FL",
+      "min_length_cm": 75,
+      "max_length_cm": 320,
+      "a": 1.8e-05,
+      "b": 3.02,
+      "equation": "W_kg = 0.000018 * (L_cm ** 3.02)",
+      "source": {
+        "type": "NZ observer / fisheries dataset analysis",
+        "citation": "NZ observer data analysis (1987–2000), reported as ln(W)=3.02 ln(L) - 10.93 (W in kg, L in cm).",
+        "evidence_note": "Converted to a-form for application use."
+      },
+      "app_notes": [
+        "Use fork length; near-isometric growth."
+      ]
+    },
+    {
+      "common_name": "Trevally",
+      "scientific_name": "Pseudocaranx georgianus",
+      "length_type": "FL",
+      "min_length_cm": 30,
+      "max_length_cm": 90,
+      "a": 1.6e-05,
+      "b": 3.064,
+      "equation": "W_kg = 0.000016 * (L_cm ** 3.064)",
+      "source": {
+        "type": "NIWA / stock assessment reference",
+        "citation": "James (1984), TRE 1 stock (originally weight in grams; converted here to kg).",
+        "evidence_note": "NZ stock-specific estimate."
+      },
+      "app_notes": [
+        "Use fork length."
+      ]
+    },
+    {
+      "common_name": "Blue Marlin",
+      "scientific_name": "Makaira nigricans",
+      "length_type": "LJFL",
+      "min_length_cm": 100,
+      "max_length_cm": 400,
+      "a": 2.79e-06,
+      "b": 3.24,
+      "equation": "W_kg = 2.79e-06 * (L_cm ** 3.24)",
+      "source": {
+        "type": "SW Pacific / regional study (proxy for NZ rec use)",
+        "citation": "Southwest Pacific dataset (example: large regional sample); coefficients for LJFL.",
+        "evidence_note": "Highly migratory; use as best-available regional proxy unless NZ-specific becomes available."
+      },
+      "app_notes": [
+        "Length is Lower Jaw–Fork Length (LJFL). Ensure your measurement instructions are explicit."
+      ]
+    },
+    {
+      "common_name": "Striped Marlin",
+      "scientific_name": "Kajikia audax",
+      "length_type": "LJFL",
+      "min_length_cm": 100,
+      "max_length_cm": 350,
+      "a": 2e-08,
+      "b": 2.9,
+      "equation": "W_kg = 2.0e-08 * (L_cm ** 2.90)",
+      "source": {
+        "type": "New Zealand recreational dataset analysis",
+        "citation": "NZ recreational data (n≈684) length–weight relationship using (curved) LJFL.",
+        "evidence_note": "NZ-specific relationship; confirm whether your LJFL is measured straight or curved."
+      },
+      "app_notes": [
+        "If your app uses straight LJFL, consider applying a conversion or sourcing straight-length coefficients.",
+        "Sex differences not significant in the referenced NZ dataset."
+      ]
+    }
+  ]
+}

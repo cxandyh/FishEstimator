@@ -1,0 +1,10 @@
+species,scientific_name,a,b,length_cm_min,length_cm_max,threshold_value,threshold_unit
+Kingfish,,a_placeholder,b_placeholder,60,170,20,kg
+Kahawai,,a_placeholder,b_placeholder,30,80,,
+Snapper,,a_placeholder,b_placeholder,25,100,20,lb
+Grouper,,a_placeholder,b_placeholder,40,160,,
+Yellowfin Tuna,,a_placeholder,b_placeholder,60,200,,
+Southern Bluefin Tuna,,a_placeholder,b_placeholder,70,220,,
+Trevally,,a_placeholder,b_placeholder,25,80,,
+Blue Marlin,,a_placeholder,b_placeholder,120,400,,
+Striped Marlin,,a_placeholder,b_placeholder,120,350,,

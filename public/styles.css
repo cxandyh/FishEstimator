@@ -1,0 +1,375 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap");
+
+:root {
+  color-scheme: light;
+  --bg: #0a1117;
+  --panel: #101a24;
+  --text: #e6edf3;
+  --muted: #9aa9b8;
+  --accent: #1b6ea6;
+  --accent-dark: #0c3b5f;
+  --accent-bright: #2aa8ff;
+  --warn: #f0725b;
+  --line: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.35);
+  --navy: #06111b;
+  --sand: #1a2632;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(42, 168, 255, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(27, 110, 166, 0.25) 0%, transparent 40%),
+    linear-gradient(180deg, #0a1117 0%, #0a141e 55%, #0a1117 100%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 24px 18px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  font-size: 28px;
+  margin: 0 0 4px;
+  letter-spacing: 0.3px;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.offline {
+  background: #e2a13a;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 14px 28px var(--shadow);
+}
+
+.label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.step {
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: rgba(42, 168, 255, 0.18);
+  color: #d7ecff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #0f1a24;
+  font-size: 16px;
+  text-align: left;
+  color: var(--text);
+}
+
+.species-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.quick-picks {
+  margin-top: 12px;
+}
+
+.caption {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.chip {
+  background: #152230;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  font-size: 16px;
+  background: #0f1a24;
+  color: var(--text);
+}
+
+.unit {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.helper {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.measure-diagram {
+  margin-top: 12px;
+  background: #0d1620;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 10px 12px 8px;
+}
+
+.measure-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: none;
+  object-fit: cover;
+}
+
+.measure-diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.diagram-caption {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.warning {
+  margin: 8px 0 0;
+  color: var(--warn);
+  font-size: 13px;
+}
+
+.primary,
+.secondary {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primary {
+  background: linear-gradient(135deg, #0f5e92 0%, #2aa8ff 100%);
+  color: white;
+  box-shadow: 0 14px 24px rgba(10, 127, 123, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--accent-dark);
+}
+
+.results .section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.pill {
+  font-size: 11px;
+  background: rgba(42, 168, 255, 0.16);
+  color: #d7ecff;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.result-card {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+  background: rgba(15, 26, 36, 0.6);
+}
+
+.result-card.highlight {
+  background: rgba(42, 168, 255, 0.18);
+  border-color: rgba(42, 168, 255, 0.5);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.result-label {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.result-value {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.result-alt {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+@media (max-width: 420px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-card {
+    text-align: left;
+  }
+}
+
+.threshold-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.threshold-row:first-of-type {
+  border-top: none;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.badge.above {
+  background: rgba(42, 168, 255, 0.2);
+  color: #d7ecff;
+}
+
+.badge.below {
+  background: rgba(255, 255, 255, 0.12);
+  color: #c7d3df;
+}
+
+.measure-diagram svg text {
+  fill: #b9d9f2;
+}
+
+.result-card.celebrate {
+  background: rgba(24, 147, 74, 0.2);
+  border-color: rgba(24, 147, 74, 0.5);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.banner {
+  border: 1px solid rgba(24, 147, 74, 0.5);
+  background: rgba(24, 147, 74, 0.18);
+  text-align: center;
+}
+
+.banner-title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #9ff2b8;
+}
+
+.banner-text {
+  margin: 0;
+  color: #d7f7e0;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .app {
+    padding: 40px 24px 60px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}

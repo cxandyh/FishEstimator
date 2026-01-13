@@ -1,0 +1,5 @@
+{
+  "unhealthy_factor": 0.9,
+  "average_factor": 1.0,
+  "healthy_factor": 1.1
+}
