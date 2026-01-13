@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="sea" x1="0" x2="1">
+      <stop offset="0" stop-color="#0f5e92" />
+      <stop offset="1" stop-color="#2aa8ff" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="#0a1117" />
+  <rect x="24" y="24" width="208" height="208" rx="44" fill="#101a24" />
+  <path
+    d="M64 132 C84 104, 128 88, 168 96 C196 102, 212 116, 224 132 C212 148, 196 162, 168 168 C128 176, 84 160, 64 132 Z"
+    fill="url(#sea)"
+  />
+  <circle cx="100" cy="120" r="6" fill="#e6edf3" />
+  <rect x="48" y="64" width="160" height="6" rx="3" fill="#1b6ea6" opacity="0.8" />
+  <rect x="48" y="188" width="120" height="6" rx="3" fill="#1b6ea6" opacity="0.6" />
+</svg>
