@@ -13,6 +13,7 @@ const elements = {
   helper: document.getElementById("length-helper"),
   estimate: document.getElementById("estimate"),
   reset: document.getElementById("reset"),
+  install: document.getElementById("install"),
   threshold: document.getElementById("threshold"),
   celebrate: document.getElementById("celebrate"),
   fishBody: document.getElementById("fish-body"),
@@ -34,6 +35,7 @@ const elements = {
 };
 
 let speciesData = [];
+let deferredPrompt = null;
 
 const formatNumber = (value) => value.toFixed(1);
 const defaultHelper = "Measure from nose to tail fork.";
@@ -304,3 +306,30 @@ elements.species.addEventListener("change", () => {
   updateDiagram(getSelectedSpecies());
   setWarning("");
 });
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredPrompt = event;
+  if (elements.install) {
+    elements.install.hidden = false;
+  }
+});
+
+window.addEventListener("appinstalled", () => {
+  deferredPrompt = null;
+  if (elements.install) {
+    elements.install.hidden = true;
+  }
+});
+
+if (elements.install) {
+  elements.install.addEventListener("click", async () => {
+    if (!deferredPrompt) {
+      return;
+    }
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    elements.install.hidden = true;
+  });
+}

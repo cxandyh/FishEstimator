@@ -237,6 +237,12 @@ input[type="number"] {
   color: var(--accent-dark);
 }
 
+.install {
+  border-style: dashed;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .results .section-header {
   display: flex;
   justify-content: space-between;
